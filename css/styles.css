@@ -17,6 +17,13 @@ header.sticky-top {
   object-fit: cover;
 }
 
+@media (max-width: 425px) {
+  .about-product-to-reverse{
+    flex-direction: column-reverse;
+  }
+}
+
+
 /* Formulário de Leads */
 #lead-form {
   transition: all 0.5s;
@@ -73,6 +80,18 @@ header.sticky-top {
   justify-content: end;
   gap: 20px;
 }
+@media (max-width: 425px) {
+  .banner-nav-container{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .banner-section-responsive{
+    margin-bottom: 20px;
+  }
+}
+
 
 .banner-nav-container button {
   font-size: 25px;
