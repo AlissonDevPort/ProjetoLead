@@ -1,0 +1,386 @@
+/* Estilo Global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Cabeçalho Sticky */
+header.sticky-top {
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero-section img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Formulário de Leads */
+#lead-form {
+  transition: all 0.5s;
+}
+
+/* Thumbnails */
+.product-title {
+  margin-bottom: 24px;
+}
+
+.product-description {
+  margin-top: 48px;
+}
+
+/* Gallery Section */
+.gallery-image {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.miniature {
+  height: 160px;
+  width: 200px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.miniature.active {
+  border: 2px solid #e74c3c;
+}
+
+.principal-banner {
+  height: 400px;
+}
+.btn-without-background {
+  background: transparent;
+  border: none;
+}
+#image-index {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#image-index span {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.banner-nav-container {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.banner-nav-container button {
+  font-size: 25px;
+}
+
+.banner-nav-btn:hover {
+  color: #616060;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.gallery-section img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.gallery-section img:hover {
+  transform: scale(1.05);
+}
+
+/* swiper */
+.testimonial-item {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+  max-width: 90%;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .testimonial-text {
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+  .testimonial-author,
+  .text-muted {
+    text-align: center;
+  }
+}
+
+.testimonial-author {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.slider,
+.slider-inner,
+.slide-img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.slide-img {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  background-color: #f7f2f0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .slide-img {
+    width: 200px;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.slider-inner {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease;
+  justify-content: center;
+  width: max-content;
+}
+
+/* CTA CountDown */
+.countdown-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; 
+  text-align: center;
+  padding: 0 20px; 
+}
+
+.countdown-content {
+  max-width: 1300px;
+  width: 100%;
+  background-color: #f7f2f0;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#product-name {
+  color: #e74c3c;
+}
+
+.countdown-timer {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333;
+}
+
+.countdown-unit {
+  display: inline-block;
+  min-width: 50px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.countdown-text {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .countdown-header {
+    font-size: 1.25rem;
+  }
+
+  .countdown-timer {
+    font-size: 2.5rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Modal da Galeria */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  display: none;
+}
+
+.modal-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.modal-overlay .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-next,
+.modal-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10000;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.modal-next:hover,
+.modal-prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-next {
+  right: 20px;
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+/** Efeito para o scroll do header */
+header {
+  height: 90px;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  background-color: #f8f9fa !important;
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+  }
+
+  header h2 {
+    display: none;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilo para o footer */
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer .footer-links a {
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  font-size: 1.5rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #007bff;
+}
+
+.footer p {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    margin-bottom: 20px;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.25rem;
+  }
+}

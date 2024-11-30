@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&W</title>
+    <link rel="icon" href="assets/fav.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <body>
+        <!-- Formulário de Captura de Leads -->
+        <section id="lead-form" class="container mt-5">
+            <h1 class="text-center mb-4">Cadastre-se e Conheça Nosso Produto</h1>
+            <form id="form" class="mx-auto" style="max-width: 500px;">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Digite seu nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" id="email" class="form-control" placeholder="usuario@hotmail.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefone:</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="(99) 99999-9999" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="background-color: #e74c3c; border: none;">Enviar</button>
+            </form>
+        </section>
+    
+        <!-- Página de Produto -->
+        <main id="product-page" class="d-none">
+            <header class="sticky-top bg-light shadow-sm py-2 px-3" style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="flex: 1;">
+                    <h2 class="mb-0">Fancy Chairs</h2>
+                    <p id="welcome-message" class="text-muted" style="margin: 0; font-size: 0.9rem;"></p>
+                </div>
+                <nav style="flex: 1; text-align: center;">
+                    <a  href="https://www.linkedin.com/in/alisson-portela-686078232/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #000;">Shop</a>
+                    <a href="https://www.linkedin.com/in/alisson-portela-686078232/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #000;">Contato</a>
+                </nav>
+                <div style="flex: 1; text-align: right;">
+                    <a href="#cart" style="margin: 0 10px; color: #000; font-size: 20px;">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </header>
+            <section class="container my-5">
+                <div class="row">
+                    <!-- About Product Section -->
+                    <div class="col-md-6">
+                        <div style="margin-bottom: 50px;">
+                            <div style="margin-bottom: 32px;">
+                                <a href="#" onclick="window.location.reload();">
+                                    <i class="fa fa-arrow-left" style="color: #e74c3c;"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="text-muted">Produtos /</span>
+                                <p class="mb-0 ms-2">Cadeira</p>
+                            </div>
+                        </div>
+                        <h2 class="product-title">Cadeira Merry Going</h2>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0">R$ 138,97</h4>
+                            <div class="rating">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star-half-alt text-warning"></i>
+                                <i class="fa fa-star text-secondary"></i>
+                                4.6 / 5.0 (556)
+                            </div>
+                        </div>
+                        <p class="product-description">
+                            As linhas suavemente curvas acentuadas pelos detalhes costurados são gentis com o corpo e agradáveis ​​de olhar. Além disso, há um mecanismo de ajuste de inclinação e altura construído para durar anos de altos e baixos.
+                        </p>
+                        <div style="display: flex; gap: 10px; margin-top: 36px;">
+                            <div style="background-color: #C1BDB3; width: 20px; height: 20px; border-radius: 50%; cursor: pointer; box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);"></div>
+                            <div style="background-color: #58737D; width: 20px; height: 20px; border-radius: 50%; cursor: pointer; cursor: not-allowed;" title="Cores indisponiveis"></div>
+                            <div style="background-color: #545454; width: 20px; height: 20px; border-radius: 50%; cursor: pointer; cursor: not-allowed;" title="Cores indisponiveis"></div>
+                            <div style="background-color: #CBA5A5; width: 20px; height: 20px; border-radius: 50%; cursor: pointer; cursor: not-allowed;" title="Cores indisponiveis"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-top: 32px;">
+                            <div style="display: flex; align-items: center; padding: 5px; gap: 5px; border: 1px solid #ccc; border-radius: 5px;" >
+                                <button 
+                                    class="btn btn-outline-secondary" 
+                                    id="decrease-quantity" 
+                                    style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: not-allowed; border: none;"
+                                    >-</button>
+                                <input 
+                                    type="text" 
+                                    id="quantity-input" 
+                                    value="1" 
+                                    style="width: 50px; text-align: center;" disabled />
+                                <button 
+                                    class="btn btn-outline-secondary" 
+                                    id="increase-quantity" 
+                                    style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: not-allowed; border: none;" 
+                                    >+</button>
+                            </div>
+                            <button class="btn btn-primary" id="buy-button" style="cursor: not-allowed; background-color: #e74c3c; border: none;">Comprar</button>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-top: 32px;">
+                            
+                            <i class="fa fa-truck"> • Frete no prazo de 3-5 dias de graça 
+                            </i> 
+                        </div>
+                        <div style="margin-top: 32px; color: #e74c3c;">
+                            <i class="fa fa-heart" style="cursor: not-allowed;" title="WishList desabilitada temporariamente :/">
+                                Adicionar a Lista de Desejos
+                            </i> 
+                        </div>
+                    </div>  
+                    <!-- Product Bannet Section -->
+                    <div class="col-md-6">
+                        <div id="image-index" class="text-end font-weight-bold mb-2">
+                            <span>01</span> / 03
+                        </div>
+                        <div class="position-relative">
+                           <div class="banner-nav-container">
+                                <button id="prev-banner" class="banner-nav-btn banner-prev btn-without-background" style="color:#e74c3c;"><</button>
+                                <button id="next-banner" class="banner-nav-btn banner-next btn-without-background" style="color:#e74c3c">></button>
+                            </div>
+                            <div id="main-image" class="mb-3">
+                                <img src="assets/chair.jpg" class="d-block w-100 rounded principal-banner" alt="Banner do produto" id="banner-image">
+                            </div>
+                            <!-- Miniatura / thumb Section -->
+                            <div class="row g-3 gallery-section mt-3">
+                                <div class="col-4">
+                                    <img src="assets/chair.jpg" class="gallery-image rounded miniature" alt="Imagem 1">
+                                </div>
+                                <div class="col-4">
+                                    <img src="assets/chair2.jpg"  class="gallery-image rounded miniature" alt="Imagem 2">
+                                </div>
+                                <div class="col-4">
+                                    <img src="assets/chair3.jpg"  class="gallery-image rounded miniature" alt="Imagem 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Depoimentos/Mentional Section -->
+            <section class="container my-5">
+                <div class="testimonials-wrapper">
+                    <h2 class="text-left mb-4">Depoimentos dos nossos clientes</h2>
+                    <div class="slider" style="overflow: hidden; width: 100%; position: relative;">
+                        <div class="slider-inner" style="display: flex; position: relative; left: 0; transition: all 0.3s;">
+                            <div class="slide-img">
+                                <img src="assets/testemonial3.png" alt="Cliente 1" class="rounded-circle mb-3" style="height: 60px;">
+                                <p class="testimonial-text">"Excelente serviço, o atendimento foi impecável e o produto superou minhas expectativas!"</p>
+                                <h5 class="testimonial-author">João Silva</h5>
+                                <p class="text-muted">Cliente</p>
+                            </div>
+                            <div class="slide-img">
+                                <img src="assets/testemonial5.png" alt="Cliente 2" class="rounded-circle mb-3" style="height: 60px;">
+                                <p class="testimonial-text">"Comprei o produto e chegou super rápido, além de ser exatamente como eu esperava!"</p>
+                                <h5 class="testimonial-author">Anna Beatriz</h5>
+                                <p class="text-muted">Cliente</p>
+                            </div>
+                            <div class="slide-img">
+                                <img src="assets/testemonial3.png" alt="Cliente 2" class="rounded-circle mb-3" style="height: 60px;">
+                                <p class="testimonial-text">"Comprei o produto e chegou super rápido, além de ser exatamente como eu esperava!"</p>
+                                <h5 class="testimonial-author">João Silva</h5>
+                                <p class="text-muted">Cliente</p>
+                            </div>
+                            <div class="slide-img">
+                                <img src="assets/testemonial5.png" alt="Cliente 2" class="rounded-circle mb-3" style="height: 60px;">
+                                <p class="testimonial-text">"Comprei o produto e chegou super rápido, além de ser exatamente como eu esperava!"</p>
+                                <h5 class="testimonial-author">Anna Beatriz</h5>
+                                <p class="text-muted">Cliente</p>
+                            </div>
+                            <div class="slide-img">
+                                <img src="assets/testemonial3.png" alt="Cliente 2" class="rounded-circle mb-3" style="height: 60px;">
+                                <p class="testimonial-text">"Comprei o produto e chegou super rápido, além de ser exatamente como eu esperava!"</p>
+                                <h5 class="testimonial-author">João Silva</h5>
+                                <p class="text-muted">Cliente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="countdown-section">
+                <div class="countdown-content">
+                  <div class="countdown-header">
+                    Promoção Especial: <span id="product-name">Cadeira Merry Going</span>!
+                  </div>
+                  <div class="countdown-timer" id="countdown">
+                    <div class="countdown-unit" id="minutes">00</div>:<div class="countdown-unit" id="seconds">00</div>
+                  </div>
+                  <p class="countdown-text">Aproveite enquanto a promoção dura!</p>
+                  <button class="cta-button" id="cta-button">Aproveitar Oferta</button>
+                </div>
+              </section>
+
+            <footer class="footer bg-light py-4 mt-5">
+                <div class="container text-center">
+                  <div class="footer-links mb-3">
+                    <a  href="https://www.linkedin.com/in/alisson-portela-686078232/" target="_blank" class="mx-3 text-muted">Política de Privacidade</a>
+                    <a  href="https://www.linkedin.com/in/alisson-portela-686078232/" target="_blank" class="mx-3 text-muted">Termos de Uso</a>
+                  </div>
+                  <div class="social-icons">
+                    <a href="#" class="mx-2 text-muted"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="mx-2 text-muted"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mx-2 text-muted"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mx-2 text-muted"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                  <p class="mt-3 text-muted">© 2024 Fancy Chairs. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+
+        </main>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js" defer></script>
+    
+</body>
+</html>
